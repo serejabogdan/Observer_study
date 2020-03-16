@@ -1,4 +1,6 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
+import { VideosService } from "../../../../shared/services/videos.service";
+import { DataService } from "../../../../shared/services/data.service";
 
 @Component({
   selector: "app-news",
@@ -6,9 +8,18 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./news.component.css"]
 })
 export class NewsComponent implements OnInit {
-  counter: number[] = [1, 2, 3, 4, 5];
+  visibleVideos: Object[] = [];
 
-  constructor() {}
+  constructor(
+    private videosService: VideosService,
+    private dataService: DataService
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.dataService.getSubject().subscribe(btnNumber => this.visibleVideos = this.setVisibleVideos(btnNumber));
+  }
+
+  setVisibleVideos(btnNumber: number): Object[] {
+    return this.videosService.getVisibleVideos()[btnNumber];
+  }
 }

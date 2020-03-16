@@ -1,0 +1,5 @@
+<button>&lt;</button>
+<button (click)="getIndexBtn(item.index)" *ngFor="let item of buttons">
+  {{ item.index + 1 }}
+</button>
+<button>&gt;</button>

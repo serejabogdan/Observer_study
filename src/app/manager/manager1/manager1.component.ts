@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./manager1.component.css']
 })
 export class Manager1Component {
-
+  hello:string = 'hello';
 }

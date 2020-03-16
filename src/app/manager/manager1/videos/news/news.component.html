@@ -1,4 +1,4 @@
-<div class="singleVideo" *ngFor="let item of counter">
+<div class="singleVideo" *ngFor="let item of visibleVideos"> 
     <div class="videoWrap">
         <div class="videoHolder">
             <img src="../../../assets/images/videoPreview.png" alt="alt">
@@ -12,7 +12,7 @@
         <div class="top">
             <div class="text">
                 <div class="date">10.07.2019</div>
-                <div class="name">Оператор Камера 2</div>
+                <div class="name">Оператор Камера {{item.id}}</div>
             </div>
 
             <div class="favorite">
