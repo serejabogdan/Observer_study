@@ -1,0 +1,53 @@
+<div class="mainWrap">
+  <app-main-tabs></app-main-tabs>
+
+  <!--  inner tab  -->
+
+  <div class="innerTab innerTab1">
+    <div class="head">
+      <div class="videoTabsWrap">
+        <div class="videoTab" [routerLink]="['news']" routerLinkActive="active">
+          Новые
+        </div>
+        <div
+          class="videoTab"
+          [routerLink]="['watched']"
+          routerLinkActive="active"
+        >
+          ПРОСМОТРЕНЫЕ
+        </div>
+        <div
+          class="videoTab"
+          [routerLink]="['favorite']"
+          routerLinkActive="active"
+        >
+          Избранное
+        </div>
+      </div>
+      <div class="filtersWrap">
+        <div class="filter">
+          <div class="value">Фильтр</div>
+          <img src="../../../assets/images/filterArrow.png" alt="alt" />
+        </div>
+        <div class="filter">
+          <div class="value">KPI</div>
+          <img src="../../../assets/images/filterArrow.png" alt="alt" />
+        </div>
+      </div>
+    </div>
+
+    <router-outlet></router-outlet>
+
+    <div class="paginator">
+      <button><</button>
+      <button class="active">1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>4</button>
+      <button>5</button>
+      <button>></button>
+    </div>
+  </div>
+
+  <!--  /inner tab  -->
+</div>

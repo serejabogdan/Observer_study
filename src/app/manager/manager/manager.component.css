@@ -1,0 +1,12 @@
+* {
+  outline: none;
+}
+
+h1 {
+  text-align: center;
+  cursor: pointer;
+}
+
+h1:hover {
+  color: gray;
+}
